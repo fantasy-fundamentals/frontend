@@ -1,0 +1,58 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    background-color: $bgColor;
+    border-radius: 8px;
+    position: relative;
+    .dateWrapper {
+      background-color: $primary;
+      padding: 0.5rem 1rem;
+      // border-radius: 0 20px 0 0;
+      position: absolute;
+      top: -15px;
+      right: 90%;
+      border-radius: 8px;
+      height: 63px;
+      width: 56.938px;
+      @media screen and (max-width: 600px) {
+        right: 0%;
+      }
+      label {
+        font-size: 1rem;
+        color: $whiteColor;
+        font-family: $peragraphFamily;
+      }
+    }
+    img {
+      height: 137px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
+    }
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      box-sizing: border-box;
+      row-gap: 0.7rem;
+      .mainHeading {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 29px;
+        color: $primary;
+      }
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $whiteColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.container {
+  overflow: hidden;
+
+  .wrapper {
+    // overflow: hidden;  \
+    border-radius: 23px;
+    background: transparent;
+    backdrop-filter: blur(13px);
+    --webkit-backdrop-filter: blur(13px);
+    margin: 0rem 0rem;
+    font-weight: lighter;
+    border: 1px solid greenyellow;
+  }
+}

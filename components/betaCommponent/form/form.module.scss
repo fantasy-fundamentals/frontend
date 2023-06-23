@@ -1,0 +1,61 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  .wrapper {
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .card {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        padding: 25px;
+        background: #232325;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        label {
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: $whiteColor;
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+        .inputWrapper {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+          input {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.2px;
+            color: #70757a;
+            border: none;
+            padding: 1rem 0.1rem;
+            outline: none;
+            background-color: transparent;
+            @media screen and (max-width: 1024px) {
+              font-size: 12px;
+              font-weight: normal;
+            }
+          }
+        }
+        .errorStyle {
+          color: $primary;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

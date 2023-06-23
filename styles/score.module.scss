@@ -1,0 +1,55 @@
+@import "../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /**tepm*/
+  // margin-top: 9rem;
+  margin-top: 3rem;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1.5rem 5rem;
+    @media screen and (max-width: 1024px) {
+      padding: 1.5rem 2rem;
+    }
+
+    .cardWrapper {
+      width: 100%;
+      max-width: 1800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      column-gap: 0.5rem;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        row-gap: 0.5rem;
+      }
+      .leftWrapper {
+        width: 65%;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          order: 2;
+        }
+      }
+      .rightWrapper {
+        // position: sticky;
+        // top: 0;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          order: 1;
+        }
+      }
+    }
+  }
+}

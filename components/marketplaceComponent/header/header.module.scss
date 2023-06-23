@@ -1,0 +1,217 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1800px;
+    width: 100%;
+    .heading {
+      margin-bottom: 1.5rem;
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        color: $whiteColor;
+        @media screen and (max-width: 600px) {
+          font-size: 25px;
+        }
+        span {
+          // -webkit-text-stroke: 1px $primary;
+          // color: transparent;
+          color: $primary;
+        }
+      }
+    }
+    .inputWrapper {
+      display: flex;
+      column-gap: 0.2rem;
+      width: 100%;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        row-gap: 0.2rem;
+      }
+
+      .input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 80%;
+        background-color: $bgColor;
+        @media screen and (min-width: 1024px) and (max-width: 1400px) {
+          max-width: 60%;
+        }
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
+        }
+        .icon {
+          font-size: 20px;
+          color: gray;
+          padding-left: 0.7rem;
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          padding: 0.8rem 1rem;
+          width: 100%;
+          outline: none;
+          color: $whiteColor;
+          &::placeholder {
+            color: gray;
+          }
+        }
+        button {
+          height: 100%;
+          background-color: $primary;
+          border: none;
+          outline: none;
+          box-sizing: border-box;
+          cursor: pointer;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: $primaryHover;
+
+            span {
+              color: $whiteColor;
+              font-size: 17px;
+              padding-top: 3px;
+              letter-spacing: 1px;
+              padding-right: 4px;
+              transform: translateX(0px);
+              font-family: $peragraphFamily;
+              opacity: 1;
+            }
+          }
+          span {
+            opacity: 0;
+            font-size: 0;
+            transform: translateX(-50px);
+            transition: 0.5s;
+            font-family: $peragraphFamily;
+          }
+
+          .icon {
+            font-size: 20px;
+            color: $whiteColor;
+            padding: 0.5rem;
+          }
+        }
+      }
+      .dropDown {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        column-gap: 0.2rem;
+        @media screen and (min-width: 1024px) and (max-width: 1600px) {
+          width: 40%;
+        }
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+        .btnWrapper {
+          display: flex;
+          column-gap: 0.2rem;
+
+          button {
+            background-color: $bgColor;
+            border: none;
+            padding: 0.8rem 1rem;
+            font-size: 25px;
+            color: $whiteColor;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.5s;
+            display: flex;
+            img {
+              width: 27px;
+              &:hover {
+                fill: $primary;
+
+                path {
+                  color: $primary;
+                  fill: $primary;
+                }
+              }
+            }
+            &:hover {
+              transition: 0.8s;
+              background-color: $bgColor;
+              color: $primary;
+            }
+          }
+          .btnActive {
+            background-color: $primary;
+            border: none;
+            padding: 0.8rem 1rem;
+            font-size: 25px;
+            color: $whiteColor;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+              transition: 0.8s;
+              background-color: $primary;
+              color: $whiteColor;
+            }
+          }
+        }
+      }
+    }
+    .bottomBtnWrapper {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      column-gap: 2rem;
+      @media screen and (max-width: 1024px) {
+        column-gap: 1rem;
+      }
+      button {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: $whiteColor;
+        background: transparent;
+        border-bottom: 2px solid transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.5s;
+        padding-bottom: 0.5rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 14px;
+          cursor: none;
+        }
+      }
+      .btnActive {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        background: transparent;
+        outline: none;
+        color: $primary;
+        border-bottom: 2px solid $primary;
+        padding-bottom: 0.5rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 14px;
+          cursor: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,516 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  .wrapper {
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    .teamsDetail {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      row-gap: 10rem;
+      .teamOne {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+        .leftWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+          }
+          width: 30%;
+          text-align: left;
+          img {
+            @media screen and (max-width: 1200px) {
+              width: 100%;
+              height: 378px;
+              object-fit: contain;
+              background-color: white;
+            }
+            height: 378px;
+            width: 90%;
+            object-fit: cover;
+            opacity: 0.7;
+            // rotate: 90deg;
+          }
+        }
+        .rightWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+          }
+          width: 80%;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 65px;
+            color: $whiteColor;
+            margin-top: 0;
+            @media screen and (min-width: 1024px) and (max-width: 1250px) {
+              font-size: 30px;
+            }
+            @media screen and (max-width: 1024px) {
+              font-size: 25px;
+              text-align: left;
+            }
+          }
+          .subPara {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .borderWrapper {
+              border: 0.1px solid $whiteColor;
+              height: 0.1px;
+              background-color: $whiteColor;
+              width: 4%;
+              @media screen and (max-width: 1024px) {
+                border: none;
+              }
+            }
+            span {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              color: $primary;
+              line-height: 17px;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: 1024px) {
+                font-size: 12px;
+              }
+            }
+          }
+          p {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+      .teamTwo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 100px;
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+        .leftWrapper {
+          text-align: end;
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            order: 2;
+          }
+          width: 70%;
+          order: 1;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 50px;
+            color: $whiteColor;
+
+            @media screen and (min-width: 1024px) and (max-width: 1250px) {
+              font-size: 30px;
+            }
+            @media screen and (max-width: 1024px) {
+              font-size: 25px;
+              text-align: left;
+            }
+          }
+          .subPara {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .borderWrapper {
+              border: 0.1px solid $whiteColor;
+              height: 0.1px;
+              background-color: $whiteColor;
+              width: 4%;
+              @media screen and (max-width: 1024px) {
+                border: none;
+              }
+            }
+            span {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              color: $primary;
+              line-height: 17px;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: 1024px) {
+                font-size: 12px;
+              }
+            }
+          }
+          p {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              text-align: justify;
+            }
+          }
+        }
+        .rightWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            order: 1;
+          }
+          width: 30%;
+          text-align: left;
+          order: 2;
+          img {
+            @media screen and (max-width: 1200px) {
+              width: 100%;
+              object-fit: contain;
+              background-color: white;
+              height: 378px;
+            }
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+          }
+        }
+      }
+      .teamThree {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+        .leftWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+          }
+          width: 30%;
+          text-align: left;
+          img {
+            @media screen and (max-width: 1200px) {
+              width: 100%;
+              object-fit: contain;
+              background-color: white;
+              height: 378px;
+            }
+            height: 378px;
+            width: 90%;
+            object-fit: cover;
+            opacity: 0.7;
+          }
+        }
+        .rightWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+          }
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 1.1rem;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            // line-height: 65px;
+            color: $whiteColor;
+            margin-top: 0;
+            @media screen and (min-width: 1024px) and (max-width: 1250px) {
+              font-size: 30px;
+            }
+            @media screen and (max-width: 1024px) {
+              font-size: 25px;
+              text-align: left;
+            }
+          }
+          .subPara {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .borderWrapper {
+              border: 0.1px solid $whiteColor;
+              height: 0.1px;
+              background-color: $whiteColor;
+              width: 4%;
+              @media screen and (max-width: 1024px) {
+                border: none;
+              }
+            }
+            span {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              color: $primary;
+              line-height: 17px;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: 1024px) {
+                font-size: 12px;
+              }
+            }
+          }
+          p {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            color: $whiteColor;
+            margin: 0;
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+
+      .teamFour {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 100px;
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+        .leftWrapper {
+          text-align: end;
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            order: 2;
+          }
+          width: 70%;
+          order: 1;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 50px;
+            color: $whiteColor;
+
+            @media screen and (min-width: 1024px) and (max-width: 1250px) {
+              font-size: 30px;
+            }
+            @media screen and (max-width: 1024px) {
+              font-size: 25px;
+              text-align: left;
+            }
+          }
+          .subPara {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .borderWrapper {
+              border: 0.1px solid $whiteColor;
+              height: 0.1px;
+              background-color: $whiteColor;
+              width: 4%;
+              @media screen and (max-width: 1024px) {
+                border: none;
+              }
+            }
+            span {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              color: $primary;
+              line-height: 17px;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: 1024px) {
+                font-size: 12px;
+              }
+            }
+          }
+          p {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              text-align: justify;
+            }
+          }
+        }
+        .rightWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            order: 1;
+          }
+          width: 30%;
+          text-align: left;
+          order: 2;
+          img {
+            @media screen and (max-width: 1200px) {
+              width: 100%;
+              object-fit: contain;
+              background-color: white;
+              height: 378px;
+            }
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+          }
+        }
+      }
+      .teamFive {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-bottom: 5rem;
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+        .leftWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            text-align: center;
+          }
+          width: 30%;
+          text-align: left;
+          img {
+            @media screen and (max-width: 1200px) {
+              width: 100%;
+              object-fit: contain;
+              background-color: white;
+              height: 378px;
+            }
+            height: 378px;
+            width: 90%;
+            object-fit: cover;
+            opacity: 0.7;
+          }
+        }
+        .rightWrapper {
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+          }
+          width: 80%;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 65px;
+            color: $whiteColor;
+            margin-top: 0;
+            @media screen and (min-width: 1024px) and (max-width: 1250px) {
+              font-size: 30px;
+            }
+            @media screen and (max-width: 1024px) {
+              font-size: 25px;
+              text-align: left;
+            }
+          }
+          .subPara {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .borderWrapper {
+              border: 0.1px solid $whiteColor;
+              height: 0.1px;
+              background-color: $whiteColor;
+              width: 4%;
+              @media screen and (max-width: 1024px) {
+                border: none;
+              }
+            }
+            span {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              color: $primary;
+              line-height: 17px;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: 1024px) {
+                font-size: 12px;
+              }
+            }
+          }
+          p {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}

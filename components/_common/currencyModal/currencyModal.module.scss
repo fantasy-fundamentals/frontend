@@ -1,0 +1,229 @@
+@import "../../../constants/scss/colors.scss";
+
+.loadingData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  padding: 2.5rem 1rem;
+  .loadingHeading {
+    font-family: $peragraphFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: $whiteColor;
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+    span {
+      // -webkit-text-stroke: 1px $primary;
+      // color: transparent;
+      color: $primary;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  user-select: none;
+  .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .heading {
+      width: 100%;
+      text-align: left;
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: left;
+        color: $whiteColor;
+      }
+      .playerDetailWrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.1rem;
+        margin-top: 1rem;
+        .headingWrapper {
+          font-family: $peragraphFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 48px;
+          text-align: left;
+          color: $whiteColor;
+        }
+        .priceWrapper {
+          font-family: $peragraphFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 48px;
+          text-align: left;
+          color: $whiteColor;
+          span {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 48px;
+            text-align: left;
+            color: $primary;
+          }
+        }
+      }
+    }
+    .counter {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 1rem;
+      width: 100%;
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: left;
+        color: $whiteColor;
+      }
+      .countBtnWrapper {
+        display: flex;
+        width: 100%;
+        .decrease {
+          background-color: #0a0909;
+          color: $whiteColor;
+          font-size: 30px;
+          transition: 0.5s;
+          outline: none;
+          border: none;
+          padding: 0.7rem 1rem;
+          cursor: pointer;
+          &:hover {
+            box-shadow: -2px 1px 20px #000000;
+          }
+          border-radius: 5px 0 0 5px;
+        }
+        .countValue {
+          background-color: #1a1515;
+          // box-shadow: -2px 1px 20px #000000;
+          padding: 0.7rem;
+          width: 80%;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $whiteColor;
+          border: none;
+          outline: none;
+        }
+        .increase {
+          cursor: pointer;
+          background-color: #0a0909;
+          color: $whiteColor;
+          font-size: 25px;
+          outline: none;
+          border: none;
+          padding: 0.7rem 0.8rem;
+          transition: 0.5s;
+          &:hover {
+            box-shadow: -2px 1px 20px #000000;
+          }
+          border-radius: 0 5px 5px 0;
+        }
+      }
+    }
+    .btnWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      padding: 0 rem;
+      &:nth-child(2) {
+        // padding: 0 1rem;
+        .activeBtn {
+          background-color: $bgPrimary;
+          font-weight: bold;
+          padding: 1rem;
+          &:last-child {
+            background-color: $bgPrimary;
+            border: none;
+            font-weight: bolder;
+            color: $whiteColor;
+            &:hover {
+              color: $whiteColor;
+            }
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 0.7rem 0;
+        text-align: center;
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        background-color: $primary;
+        border: none;
+        outline: none;
+        color: $whiteColor;
+        mix-blend-mode: normal;
+        cursor: pointer;
+        transition: 0.5s;
+        user-select: none;
+        &:last-child {
+          background-color: transparent;
+          border: 1px solid $primary;
+          color: $primary;
+          &:hover {
+            color: $whiteColor;
+          }
+        }
+        &:hover {
+          background-color: $primaryHover;
+        }
+      }
+    }
+  }
+}
+.stripeFormModal {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    color: white;
+    user-select: none;
+  }
+  button {
+    background-color: #dc1a22;
+    width: 100%;
+    padding: 0.6rem 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    transition: 0.25s;
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background-color: #aa070d;
+    }
+  }
+}

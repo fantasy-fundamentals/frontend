@@ -1,0 +1,22 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100% !important;
+  height: 100px !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    .chartWrapper {
+      width: 100px !important;
+      height: 400px !important;
+    }
+  }
+  .textWrapper {
+    color: $whiteColor;
+    position: absolute;
+    top: 41%;
+    font-family: $headingFamily;
+  }
+}

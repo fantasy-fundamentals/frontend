@@ -1,0 +1,45 @@
+@import "../../../constants/scss/colors.scss";
+.cardWrapper {
+  width: 100%;
+  // max-height: 472px;
+  max-height: 700px;
+  overflow-x: auto;
+  background: $bgColor;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  @media screen and (max-width: 1024px) {
+    width: 100% !important;
+  }
+  .heading {
+    label {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      color: $whiteColor;
+      @media screen and (max-width: 1024px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .card {
+    .subHeading {
+      padding: 1.1rem 0;
+      border-bottom: 0.5px solid #000000;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      color: $whiteColor;
+      cursor: pointer;
+      &:last-child {
+        border-bottom: none;
+      }
+      @media screen and (max-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

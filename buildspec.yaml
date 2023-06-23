@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 672772906416.dkr.ecr.us-east-1.amazonaws.com
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t 672772906416.dkr.ecr.us-east-1.amazonaws.com/fantasy-frontend:latest .
+      - docker push 672772906416.dkr.ecr.us-east-1.amazonaws.com/fantasy-frontend:latest
+  post_build:
+    commands:
+      - echo Deploying to Amazon ECS...
+      - aws ecs update-service --cluster Fantasy-Cluster --service Fantasy-Webapp --force-new-deployment
+
+
+

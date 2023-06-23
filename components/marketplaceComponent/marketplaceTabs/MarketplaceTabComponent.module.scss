@@ -1,0 +1,86 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  .tabs {
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+    max-width: 1800px;
+    margin: 0rem auto 1rem;
+    padding: 0rem 0rem 0rem 0rem;
+    color: $whiteColor;
+    font-weight: 500;
+    border-radius: 2rem;
+    box-sizing: border-box;
+
+    .nav {
+      width: 80%;
+      margin: 0 0 2.5rem 0rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0rem 0.2rem;
+      @media screen and (min-width: 1024px) and (max-width: 1400px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      li {
+        width: 33.3%;
+
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: flex-start;
+        height: 50px;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-family: $headingFamily;
+        border-bottom: 3px solid #cfd0cd;
+        color: #a6a8a3;
+        font-weight: bold;
+        padding: 0;
+        user-select: none;
+        @media (max-width: 530px) {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          font-size: 0.7rem;
+          padding: 0;
+          width: 50%;
+        }
+        @media (min-width: 530px) and (max-width: 1024px) {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.9rem;
+          width: 50%;
+        }
+      }
+      li:hover {
+        color: $whiteColor;
+      }
+      li.active {
+        color: $primary;
+        font-weight: 600;
+        border-bottom: 3px solid $primary;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

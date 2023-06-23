@@ -1,0 +1,191 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    .imageWrapper {
+      width: 100%;
+      padding: 2rem 0.5rem;
+      box-sizing: border-box;
+      background-color: $bgColor;
+      border-radius: 8px;
+      input {
+        color: $primary;
+      }
+    }
+    .headingWrapper {
+      display: flex;
+      flex-direction: column;
+      // row-gap: 0.4rem;
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 40px;
+        color: #e0e0e1;
+      }
+      p {
+        margin: 0;
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 29px;
+        color: #e0e0e1;
+        span {
+          color: $primary;
+          text-decoration: underline;
+          // cursor: pointer;
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 29px;
+        }
+      }
+      span {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: $whiteColor;
+        margin: 0.5rem 0;
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+      }
+    }
+    .inputWrapper {
+      display: flex;
+      column-gap: 1rem;
+      width: 100%;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+      .leftWrapper {
+        width: 50%;
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
+        .errorStyle {
+          font-family: $headingFamily;
+          color: $primary;
+          font-size: 12px;
+          margin-top: 0.2rem;
+        }
+        .DropDownWrapper {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          max-width: 100%;
+          @media screen and (max-width: 1024px) {
+            max-width: 100%;
+          }
+          .errorStyle {
+            font-family: $headingFamily;
+            color: $primary;
+            font-size: 12px;
+            margin-top: 0.2rem;
+          }
+          .dropDownHeading {
+            width: 100%;
+            label {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: $whiteColor;
+              font-family: $headingFamily;
+            }
+          }
+        }
+      }
+      .rightWrapper {
+        width: 50%;
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
+        .errorStyle {
+          font-family: $headingFamily;
+          color: $primary;
+          font-size: 12px;
+          margin-top: 0.2rem;
+        }
+        .textAreaWrapper {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          .textAreaHeading {
+            width: 100%;
+            label {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: $whiteColor;
+              font-family: $headingFamily;
+            }
+          }
+          textarea {
+            height: 100%;
+            min-height: 235px;
+            max-height: 235px;
+            overflow: auto;
+            resize: none;
+            box-sizing: border-box;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: $whiteColor;
+            padding: 0.5rem;
+            background-color: $bgColor;
+            font-family: $headingFamily;
+            overflow: hidden;
+            border-radius: 3px;
+            &::placeholder {
+              color: #e0e0e1af;
+            }
+          }
+        }
+      }
+    }
+
+    .btnWrapper {
+      width: 49.5%;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
+      button {
+        background-color: $primary;
+        width: 100%;
+        padding: 0.8rem 2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: $whiteColor;
+        transition: 0.4s;
+        max-width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: "Montserrat";
+        border: none;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background-color: $primaryHover;
+        }
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 600px) {
+          padding: 0.6rem 1rem;
+        }
+      }
+    }
+  }
+}

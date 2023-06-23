@@ -1,0 +1,48 @@
+.btn {
+  background-color: #dc1a22;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  transition: 0.25s;
+  max-width: 142px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat";
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    box-shadow: inset -71px 0 0 0 #aa070d, inset 71px 0 0 0 #aa070d;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0.6rem 1rem;
+  }
+}
+
+.outlineBtn {
+  background-color: transparent;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat";
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  transition: 0.25s;
+  border: 1px solid #dc1a22;
+  width: 142px;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    box-shadow: inset -71px 0 0 0 #dc1a22, inset 71px 0 0 0 #dc1a22;
+  }
+  &:focus {
+    box-shadow: inset 142px 0 0 0 #dc1a22;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0.6rem 1rem;
+  }
+}

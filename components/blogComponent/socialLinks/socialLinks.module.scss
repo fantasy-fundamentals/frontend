@@ -1,0 +1,79 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    .cardWrapper {
+      width: 100%;
+      background-color: $bgColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      max-width: 200px;
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
+
+      .card {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+        color: $whiteColor;
+        transition: 0.8s;
+        text-decoration: none;
+        cursor: pointer;
+        &:nth-child(2) {
+          column-gap: 1.7rem;
+        }
+        &:hover {
+          transition: 0.5s;
+          .imgIcon {
+            color: $primary;
+          }
+          span {
+            color: $primary;
+            text-decoration: none;
+          }
+          .rightIcon {
+            transform: 1s;
+            transform: translateX(10px);
+            box-sizing: border-box;
+            path {
+              stroke: $primary !important;
+            }
+          }
+        }
+        &:nth-child(3) {
+          column-gap: 1.3rem;
+        }
+        &:nth-child(4) {
+          column-gap: 1.2rem;
+        }
+        .imgIcon {
+          color: $whiteColor;
+          font-size: 20px;
+          transition: 0.5s;
+        }
+        span {
+          text-decoration: underline;
+          font-family: $headingFamily;
+          color: $whiteColor;
+          font-size: 18px;
+          transition: 0.5s;
+        }
+        .rightIcon {
+          transition: 0.5s;
+          color: $whiteColor !important;
+          font-size: 30px;
+          transform: translateX(0px);
+          path {
+            stroke: $whiteColor !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+
+  .wrapper {
+    width: 100%;
+
+    .headerWrapper {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid black;
+      border-radius: 9px 9px 0px 0px;
+      padding: 0.6rem 0.8rem;
+      box-sizing: border-box;
+
+      .leftWrapper {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: $whiteColor;
+        width: 98%;
+      }
+
+      .rightWrapper {
+        cursor: pointer;
+        width: 2%;
+        align-self: center;
+        display: flex;
+        justify-content: flex-end;
+        user-select: none;
+
+        .imgActive {
+          transition: 0.4s;
+          rotate: 0deg;
+          width: 18px;
+          height: 18px;
+          user-select: none;
+        }
+
+        .imgNotActive {
+          transition: 0.5s;
+          rotate: 180deg;
+          width: 18px;
+          height: 18px;
+          z-index: 1;
+        }
+      }
+    }
+
+    .bottomWrapper {
+      width: 100%;
+      overflow: auto;
+      min-height: 200px;
+      max-height: 250px;
+      min-width: 270px;
+      width: 100%;
+      background: $bgColor;
+      border-radius: 0px 0px 9px 9px;
+    }
+    .changeStyle {
+      width: 100%;
+      overflow: auto;
+      min-height: auto;
+      max-height: 400px;
+      min-width: 270px;
+      width: 100%;
+      background: $bgColor;
+      border-radius: 0px 0px 9px 9px;
+    }
+  }
+}

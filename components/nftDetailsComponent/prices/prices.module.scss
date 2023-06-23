@@ -1,0 +1,401 @@
+@import "../../../constants/scss/colors.scss";
+.headingWrapper {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    // row-gap: 1rem;
+  }
+  label {
+    font-style: normal;
+    // font-weight: bold;
+    font-size: 35px;
+    // font-style: normal;
+    font-weight: bolder !important;
+    line-height: 29px;
+    color: $whiteColor;
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-style: normal;
+    font-size: 18px;
+    color: $whiteColor;
+    margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+}
+
+.cardWrapper {
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+    background: black;
+    border-radius: 9px 9px 0 0;
+    height: 40px;
+    color: $whiteColor;
+    font-family: $headingFamily;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  .price {
+    background: $bgColor;
+    border-radius: 0 0 9px 9px;
+    padding: 1.6rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 120px;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 0.7rem;
+    }
+    .leftWrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      label {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: $whiteColor;
+        font-family: $headingFamily;
+
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        text-transform: capitalize;
+        font-family: $headingFamily;
+        color: $primary;
+        margin: 0;
+        display: flex;
+        column-gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 18px;
+          column-gap: 0.5rem;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          user-select: none;
+          @media screen and (max-width: 1024px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        span {
+          display: flex;
+          align-self: end;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 34px;
+          color: $whiteColor;
+          font-family: $headingFamily;
+          margin-bottom: 2px;
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+      }
+      .listingPrice {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        label {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          color: $whiteColor;
+          font-family: $headingFamily;
+
+          @media screen and (min-width: 600px) and (max-width: 1024px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+        }
+        p {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          text-transform: capitalize;
+          font-family: $headingFamily;
+          color: $primary;
+          margin: 0;
+          display: flex;
+          column-gap: 1rem;
+          justify-content: flex-start;
+          align-items: center;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 18px;
+            column-gap: 0.5rem;
+          }
+
+          img {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            user-select: none;
+            @media screen and (max-width: 1024px) {
+              width: 18px;
+              height: 18px;
+            }
+          }
+
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 34px;
+            color: $whiteColor;
+            font-family: $headingFamily;
+            // margin-bottom: 2px;
+            @media screen and (max-width: 1024px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .rightWrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 27px;
+        color: $whiteColor;
+        font-family: $headingFamily;
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        // text-transform: capitalize;
+        font-family: $headingFamily;
+        color: $whiteColor;
+        margin: 0;
+        display: flex;
+        column-gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 18px;
+          column-gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    @media screen and (max-width: 865px) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 1rem;
+    }
+    .listing {
+      display: flex;
+      column-gap: 1rem;
+      align-items: center;
+      span {
+        color: $whiteColor;
+        font-size: 25px;
+        font-family: $peragraphFamily;
+        span {
+          // -webkit-text-stroke: 1px $primary;
+          // color: transparent;
+          color: $primary;
+        }
+      }
+      .toggle {
+        display: flex;
+        width: 100px;
+        button {
+          width: 50px;
+          background-color: black;
+          border: 1px solid black;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .activeButton {
+          cursor: pointer;
+          padding: 0.7rem 0;
+          font-size: 18px;
+          font-weight: 500;
+          border: 1px solid black;
+          font-family: $headingFamily;
+          background-color: $primary;
+          color: $whiteColor;
+          font-family: $peragraphFamily;
+          transition: 0.4s;
+          &:hover {
+            background-color: none;
+          }
+        }
+      }
+    }
+    .burnButton {
+      @media screen and (max-width: 1024px) {
+        padding: 0.5rem 0;
+        font-size: 16px;
+        width: 100%;
+        &:hover {
+          box-shadow: unset;
+          background-color: $primaryHover;
+          transition: 0.4s;
+          text-indent: 0px;
+        }
+      }
+
+      width: 150px;
+      cursor: pointer;
+      padding: 0.7rem 0;
+      font-size: 18px;
+      font-weight: 500;
+      border: 1px solid $primary;
+      font-family: $headingFamily;
+      background-color: $primary;
+      color: $whiteColor;
+      font-family: $peragraphFamily;
+      transition: 0.4s;
+
+      // .icon {
+      //   color: $whiteColor;
+      //   font-size: 18px;
+      //   transform: translateX(0px);
+      //   transition: 0.4s;
+      //   path {
+      //     stroke: $whiteColor !important;
+      //     // stroke-width: 3;
+      //   }
+      // }
+      &:hover {
+        .icon {
+          rotate: 180deg;
+          // transform: translateX(-80px);
+        }
+        // text-indent: -80px;
+        box-shadow: inset -100px 0 0 0 $primaryHover,
+          inset 100px 0 0 0 $primaryHover;
+      }
+    }
+    button {
+      @media screen and (max-width: 1024px) {
+        padding: 0.5rem 0;
+        font-size: 16px;
+        width: 100%;
+        &:hover {
+          box-shadow: unset;
+          background-color: $primaryHover;
+          transition: 0.4s;
+          text-indent: 0px;
+        }
+      }
+
+      width: 200px;
+      cursor: pointer;
+      padding: 0.7rem 0;
+      font-size: 18px;
+      font-weight: 500;
+      border: 1px solid $primary;
+      font-family: $headingFamily;
+      background-color: $primary;
+      color: $whiteColor;
+      font-family: $peragraphFamily;
+      transition: 0.4s;
+
+      // .icon {
+      //   color: $whiteColor;
+      //   font-size: 18px;
+      //   transform: translateX(0px);
+      //   transition: 0.4s;
+      //   path {
+      //     stroke: $whiteColor !important;
+      //     // stroke-width: 3;
+      //   }
+      // }
+      &:hover {
+        .icon {
+          rotate: 180deg;
+          // transform: translateX(-80px);
+        }
+        // text-indent: -80px;
+        box-shadow: inset -100px 0 0 0 $primaryHover,
+          inset 100px 0 0 0 $primaryHover;
+      }
+    }
+    .activeButton {
+      @media screen and (max-width: 1024px) {
+        padding: 0.5rem 0;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      width: 200px;
+      cursor: pointer;
+      padding: 0.7rem 0;
+      font-size: 18px;
+      font-weight: 500;
+      border: 1px solid black;
+      font-family: $headingFamily;
+      background-color: black;
+      color: $whiteColor;
+      transition: 0.8s;
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1800px;
+    .topWrapper {
+      width: 100%;
+      display: flex;
+      background-color: $bgColor;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+      .leftCard {
+        width: 35%;
+        display: flex;
+        padding: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2.5rem;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+        .leftSide {
+          width: auto;
+          label {
+            width: 100%;
+            color: $whiteColor;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 29px;
+            font-family: $headingFamily;
+            @media screen and (max-width: 1024px) {
+              font-size: 22px;
+            }
+          }
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 29px;
+            color: #e0e0e1;
+            font-family: $headingFamily;
+          }
+        }
+        .rightSide {
+          width: auto;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+      .centerCard {
+        background-color: #1e1e1e;
+        width: 25%;
+        display: flex;
+        padding: 1rem;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2.5rem;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+        label {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          text-align: center;
+          color: #e0e0e1;
+          font-family: $headingFamily;
+        }
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          text-align: center;
+          color: #e0e0e1;
+          font-family: $headingFamily;
+        }
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 8px;
+          background-color: #dc1a22;
+          width: 100%;
+          padding: 0.7rem;
+          box-sizing: border-box;
+          text-align: center;
+          color: white;
+          transition: 0.25s;
+          max-width: 135px;
+          font-weight: 500;
+          font-size: 14px;
+          font-family: "Montserrat";
+          border: none;
+          cursor: pointer;
+          outline: none;
+          .icon {
+            font-size: 14px;
+          }
+          &:hover {
+            box-shadow: inset -71px 0 0 0 #aa070d, inset 71px 0 0 0 #aa070d;
+          }
+          @media screen and (max-width: 600px) {
+            padding: 0.6rem 1rem;
+          }
+        }
+      }
+      .rightCard {
+        width: 35%;
+        display: flex;
+        padding: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2.5rem;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+        .leftSide {
+          width: auto;
+          label {
+            width: 100%;
+            color: $whiteColor;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 29px;
+            font-family: $headingFamily;
+            @media screen and (max-width: 1024px) {
+              font-size: 22px;
+            }
+          }
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 29px;
+            color: #e0e0e1;
+            font-family: $headingFamily;
+          }
+        }
+        .rightSide {
+          width: auto;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+    .bottomWrapper {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+      height: 659px;
+      @media screen and (max-width: 865px) {
+        order: 1;
+        height: 300px;
+        width: 100%;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1350px) {
+        order: 1;
+        height: 300px;
+        width: 100%;
+      }
+      &:hover {
+        .videoLoading {
+          background-color: rgba(0, 0, 0, 0.74);
+          .btnWrapper {
+            .btn {
+              background-color: $primaryHover;
+            }
+          }
+          .iconWrapper {
+            .icon {
+              rotate: 360deg;
+              transform: 1s;
+              width: 75px;
+              height: 75px;
+              filter: drop-shadow(2px 2px 2px 1px $primaryHover);
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .videoLoading {
+        position: absolute;
+        top: 0;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.664);
+        .btnWrapper {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          //   height: 4%;
+          .btn {
+            padding: 0.5rem;
+            background-color: $primary;
+            font-family: $headingFamily;
+            color: $whiteColor;
+            font-size: 12px;
+          }
+        }
+        .iconWrapper {
+          height: 95%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            color: $whiteColor;
+            font-size: 10px !important;
+            background-color: $primary;
+            border: none;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

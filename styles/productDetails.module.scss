@@ -1,0 +1,262 @@
+@import "../constants/scss/colors.scss";
+.container {
+  display: flex;
+  width: 100%;
+  padding: 6rem 0rem;
+  @media screen and (min-width: 1200px) {
+    padding: 3rem 0rem;
+  }
+  justify-content: center;
+  align-items: center;
+  /**temp**/
+  margin-top: 5rem;
+  .wrapper {
+    @media screen and (min-width: 1200px) {
+      width: 70%;
+      min-height: 90vh;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    width: 80%;
+    min-height: 90vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2.5rem;
+
+    .leftWrapper {
+      @media screen and (min-width: 1200px) {
+        width: 45%;
+      }
+      width: 100%;
+      .productGalleryWrapper {
+        @media screen and (min-width: 1200px) {
+          width: 100%;
+        }
+
+        padding: 2rem;
+        background: $bgColor;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        .badge {
+          width: 67px;
+          height: 37px;
+          background: $primary;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          color: $whiteColor;
+          top: 10;
+        }
+        .selectedImage {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 350px;
+            max-width: 350px;
+            user-select: none;
+          }
+        }
+        .gallerySlider {
+          @media screen and (min-width: 1200px) {
+            margin-top: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          column-gap: 15px;
+          overflow-x: scroll;
+
+          .imgWrapper {
+            width: 110px;
+            @media screen and (min-width: 1200px) {
+              width: 22%;
+            }
+            height: 90px;
+            max-height: 140px;
+            background: $bgPrimary;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.6s;
+            &:hover {
+              background: $bgSec;
+            }
+            img {
+              width: 130px;
+              height: 70px;
+              object-fit: contain;
+              cursor: pointer;
+            }
+          }
+          .activeimgWrapper {
+            width: 110px;
+            @media screen and (min-width: 1200px) {
+              width: 22%;
+            }
+            height: 90px;
+            max-height: 140px;
+            background: $whiteColor;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.6s;
+            img {
+              width: 130px;
+              height: 70px;
+              object-fit: contain;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .rightWrapper {
+      @media screen and (min-width: 1200px) {
+        width: 45%;
+      }
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+      .topWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        .heading {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          label {
+            font-weight: 400;
+            font-size: 16px;
+            color: $primary;
+          }
+          p {
+            font-weight: 700;
+            font-size: 30px;
+            color: $whiteColor;
+            margin: 0;
+          }
+        }
+        .subHeading {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          label {
+            font-weight: 400;
+            font-size: 16px;
+            color: $whiteColor;
+          }
+          p {
+            font-weight: 700;
+            font-size: 30px;
+            color: $whiteColor;
+            margin: 0;
+          }
+          .dollarPrice {
+            font-weight: 400;
+            font-size: 14px;
+            color: $primary;
+            text-align: left;
+            padding-left: 0px;
+          }
+        }
+      }
+      .middleWrapper {
+        width: 100%;
+        .productSize {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          label {
+            font-weight: 700;
+            font-size: 19px;
+            color: $whiteColor;
+          }
+          .boxWrapper {
+            display: flex;
+            // justify-content: space-between;
+            column-gap: 1rem;
+            align-items: center;
+            // width: 60%;
+            // @media screen and (min-width: 1200px) {
+            //   width: 25%;
+            // }
+            .box {
+              width: 42px;
+              height: 42px;
+              background: $bgColor;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: $whiteColor;
+              border-radius: 10px;
+              cursor: pointer;
+              user-select: none;
+            }
+            .activeBox {
+              width: 42px;
+              height: 42px;
+              background: $primary;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: $whiteColor;
+              border-radius: 10px;
+              cursor: pointer;
+              user-select: none;
+            }
+          }
+        }
+      }
+      .chargesPrice {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        label {
+          font-weight: 400;
+          font-size: 16px;
+          color: $whiteColor;
+        }
+        p {
+          font-weight: 700;
+          font-size: 30px;
+          color: $whiteColor;
+          margin: 0;
+        }
+      }
+      label {
+        font-weight: 500;
+        font-size: 25px;
+        color: $primary;
+        margin: 0;
+        user-select: none;
+      }
+    }
+  }
+}

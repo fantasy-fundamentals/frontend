@@ -1,0 +1,80 @@
+@import "/constants/scss/colors.scss";
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4.5rem 5rem 3rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**temp**/
+  // margin-top: 6rem;
+  @media screen and (max-width: 1024px) {
+    padding: 4.5rem 2rem;
+  }
+  .wrapper {
+    max-width: 1950px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    padding-top: 4rem;
+
+    label {
+      font-family: $peragraphFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      color: $whiteColor;
+      @media screen and (max-width: 600px) {
+        font-size: 25px;
+      }
+      span {
+        // -webkit-text-stroke: 1px $primary;
+        // color: transparent;
+        color: $primary;
+      }
+    }
+    .cardWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      background: $bgColor;
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 2rem;
+      color: $whiteColor;
+      font-size: 20px;
+      .note {
+        font-size: 16px;
+        span {
+          color: $primary;
+          font-weight: bold;
+          padding-right: 0.4rem;
+        }
+      }
+      img {
+        width: 370px;
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
+      }
+      button {
+        background-color: $primary;
+        color: $whiteColor;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: 0.8s;
+        border-radius: 5px;
+        width: 100px;
+        &:hover {
+          background-color: $primaryHover;
+        }
+      }
+    }
+  }
+}

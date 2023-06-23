@@ -1,0 +1,38 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    label {
+      font-family: $peragraphFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      color: $whiteColor;
+      @media screen and (max-width: 1024px) {
+        font-size: 25px;
+      }
+      span {
+        // -webkit-text-stroke: 1px $primary;
+        // color: transparent;
+        color: $primary;
+      }
+    }
+    h4 {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-family: $headingFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: $whiteColor;
+      @media screen and (max-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

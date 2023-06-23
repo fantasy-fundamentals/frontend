@@ -1,0 +1,51 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:672772906416:task-definition/Fantasy-Webapp:16",
+    "containerDefinitions": [
+        {
+            "name": "Fantasy-Webapp",
+            "image": "672772906416.dkr.ecr.us-east-1.amazonaws.com/fantasy-frontend:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "Fantasy-Webapp",
+    "taskRoleArn": "arn:aws:iam::672772906416:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::672772906416:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 16,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "registeredAt": "2023-05-23T19:38:27.400000+05:00",
+    "registeredBy": "arn:aws:iam::672772906416:user/wasif"
+}

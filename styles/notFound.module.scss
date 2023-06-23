@@ -1,0 +1,60 @@
+@import "../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .Wrapper {
+    display: flex;
+    min-height: 91vh;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    .HeadingWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      align-items: center;
+
+      .imgWrapper {
+        height: 200px;
+        @media screen and (max-width: 1024px) {
+          height: 120px;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 1550px) {
+          height: 120px;
+        }
+      }
+      .heading {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 80px;
+        text-align: center;
+        color: $whiteColor;
+        font-family: $headingFamily;
+        @media screen and (max-width: 1024px) {
+          font-weight: bold;
+          font-size: 23px;
+          padding-top: 0;
+          line-height: 50px;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 1550px) {
+          font-size: 40px;
+          line-height: 100px;
+        }
+      }
+      .subHeading {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        color: gray;
+        font-family: $peragraphFamily;
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 1550px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

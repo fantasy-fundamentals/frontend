@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Montserrat&display=swap");
+body {
+  margin: 0;
+  background-color: #111112;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+}
+code {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+}
+/*scrollBar*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #232325;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc1a22;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc1a22;
+}
+/*scrollBar*/
+/*input number*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*input number*/
+/*Slider*/
+.mySwiper {
+  width: 100%;
+}
+
+#refgr .swiper-wrapper {
+  padding-bottom: 1.5rem;
+}
+.main-carasoul {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  background: #ff010c29 !important;
+  border-radius: 50px;
+  padding: 0.2rem;
+  top: 50% !important;
+  right: 3% !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.swiper-button-next {
+  background: #ff010c29 !important;
+  border-radius: 50px;
+  padding: 0.2rem;
+  top: 50% !important;
+  right: 3% !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+@media screen and (max-width: 426px) {
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px !important;
+  color: #fff;
+}
+#text {
+  font-style: normal;
+  font-size: 26px;
+  line-height: 113.9%;
+  color: rgba(255, 183, 24, 0.95);
+  position: relative;
+  width: 460px;
+  height: 72px;
+  margin-bottom: 3rem;
+}
+
+#carasol_card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 178px;
+  height: 180px;
+  display: flex;
+  filter: grayscale(100%);
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#carasol_card:hover {
+  filter: invert(0%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.slider-div {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 178px;
+}
+
+#card_names {
+  color: rgba(255, 183, 24, 0.95);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 23px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: flex-end;
+  margin: auto;
+  mix-blend-mode: color-dodge;
+}
+
+#card_desc {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 113.9%;
+  text-align: center;
+  color: rgba(255, 183, 24, 0.95);
+}
+
+.div_of_title {
+  background: rgba(0, 0, 0, 0.2);
+  width: 180px;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mySwiper .swiper-button-next {
+  top: 43%;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+
+.mySwiper .swiper-button-prev {
+  font-weight: bolder;
+  top: 43%;
+  opacity: 0.8;
+}
+
+.mySwiper.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  top: 95%;
+
+  @media screen and (max-width: 600px) {
+    top: 90%;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    top: 90%;
+  }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: red !important;
+  background-color: #d80f29 !important;
+  width: 38px !important;
+  height: 5px !important;
+  border-radius: 2px !important;
+}
+
+span.swiper-pagination-bullet {
+  color: #232325 !important;
+  background-color: #232325 !important;
+  width: 38px !important;
+  height: 5px !important;
+  border-radius: 2px !important;
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.swiper-button-prev.swiper-button-disabled {
+  display: none !important;
+}
+.swiper-no-swiping {
+  pointer-events: none;
+}
+/*Slider*/
+
+/**nProgress**/
+
+#nprogress {
+  pointer-events: "none";
+}
+#nprogress .bar {
+  top: 0;
+  left: 0;
+  height: 2.5;
+  width: 100%;
+  position: fixed;
+  z-index: 7;
+  background-color: #d80f29 !important;
+  box-shadow: 0 0 2px #d80f29 !important;
+}
+#nprogress .peg {
+  right: 0;
+  opacity: 1;
+  width: 100;
+  height: 100%;
+  display: block;
+  position: absolute;
+  transform: rotate(3deg) translate(0px, -4px);
+  box-shadow: 0 0 10px #d80f29, 0 0 5px #d80f29 !important;
+}
+#nprogress .spinner-icon {
+  border: solid 2px transparent;
+  animation: nprogress-spinner 400ms linear infinite;
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-top-color: #d80f29 !important;
+  border-left-color: #d80f29 !important;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/**nProgress**/
+
+.Toastify__toast-theme--dark {
+  background-color: rgb(55, 55, 56) !important;
+}
+
+.StripeElement {
+  background-color: #2c2c2c;
+  padding: 17px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* border: 2px solid #e0dddd; */
+}
+
+/* Set a red bottom border to field when empty */
+.StripeElement--empty {
+  border-bottom-color: #b22222;
+}
+
+/* Set a green bottom border to field when in focus */
+.StripeElement--focus {
+  border-bottom-color: #008000;
+}
+
+/* Set styling when form field data is invalid */
+.StripeElement--invalid {
+  /* background-color: #ffd90080; */
+  border-color: #b22222;
+}
+
+/* Set styling when form field data is completed and valid */
+.StripeElement--complete {
+  background-color: #00800015;
+  color: #fff !important;
+}
+input.InputElement.is-complete.Input {
+  color: #fff !important;
+}
+/* Set credit card number input field width */
+form.pmpro_form #pmpro_payment_information_fields div#AccountNumber {
+  max-width: 270px;
+}
+
+/* Set expiry date input field width */
+form.pmpro_form #pmpro_payment_information_fields div#Expiry {
+  max-width: 110px;
+}
+
+/* Set CVC/CVV input field width */
+form.pmpro_form #pmpro_payment_information_fields div#CVV {
+  max-width: 110px;
+}
+.InputElement .Input {
+  color: #fff !important;
+}
+.InputContainer .InputElement {
+  color: #fff !important;
+}
+.ElementsApp input {
+  color: #fff !important;
+}
+
+#card-element .CardField .CardField---ltr {
+  border: 1px solid red !important;
+}
+.stripe-form .form-text {
+  border: 1px solid white;
+  color: white !important;
+  background-color: white !important;
+}
+.stripe-form .form-text::placeholder {
+  color: white;
+}
+
+/**disqus comments**/
+
+#disqus_thread a {
+  color: #d80f29 !important;
+}
+
+#disqus_thread p {
+  color: #d80f29 !important;
+}
+
+#dsq-content #dsq-comments .dsq-comment-body {
+  color: #fff !important;
+  background-color: #000000 !important;
+}
+
+.dsq-reaction-body {
+  color: #fff !important;
+  background-color: #000000 !important;
+}
+
+.dsq-reaction-header cite,
+.dsq-reaction-header span {
+  color: #ccc !important;
+}
+
+.dsq-reaction-retweets {
+  color: #ccc !important;
+}
+#disqus_thread {
+  position: relative;
+}
+#disqus_thread:after {
+  content: "";
+  display: block;
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #232325;
+}
+
+/**disqus comments**/
+/* .react-loading-skeleton {
+  background-color: #5f5f5f !important;
+  --base-color: #5f5f5f !important;
+  --highlight-color: #5f5f5f !important;
+} */

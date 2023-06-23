@@ -1,0 +1,241 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    box-sizing: border-box;
+    height: auto;
+    @media screen and (min-width: 800px) and (max-width: 1024px) {
+      justify-content: center;
+    }
+    .cardWrapper {
+      width: 100%;
+      max-width: 49.6%;
+      box-sizing: border-box;
+      background: #232325;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      row-gap: 20px;
+      border-left: #111112 3px solid;
+      margin: 0;
+      @media screen and (max-width: 634px) {
+        max-width: 100%;
+        flex-direction: column;
+      }
+      @media screen and (min-width: 634px) and (max-width: 865px) {
+        max-width: 49.3%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      @media screen and (min-width: 865px) and (max-width: 1024px) {
+        max-width: 49.4%;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1350px) {
+        max-width: 49%;
+        flex-direction: column;
+      }
+      @media screen and (min-width: 1350px) and (max-width: 1730px) {
+        max-width: 49%;
+      }
+      cursor: pointer;
+      .leftWrapper {
+        width: 100%;
+        // width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        overflow-y: auto;
+        align-items: flex-start;
+        @media screen and (max-width: 865px) {
+          order: 2;
+          width: 100%;
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1350px) {
+          order: 2;
+          width: 100%;
+        }
+        .header {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          label {
+            font-weight: 400;
+            font-size: 14px;
+            color: #878c91;
+            line-height: 50px;
+            font-family: $headingFamily;
+          }
+          img {
+            max-width: 12%;
+            padding-right: 10px;
+          }
+        }
+        table {
+          width: 100%;
+          min-width: 189px;
+          thead {
+            tr {
+              th {
+                font-size: 13px;
+                font-weight: 400;
+                font-family: $headingFamily;
+                color: #e0e0e1;
+                text-align: left;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                font-size: 15px;
+                color: $whiteColor;
+                height: 80px;
+                font-family: $headingFamily;
+                img {
+                  height: 30px;
+                  width: 30px;
+                }
+                .imgHeading {
+                  font-size: 15px;
+                  color: $whiteColor;
+                  font-family: $headingFamily;
+                  p {
+                    font-family: $headingFamily;
+                    font-size: 13px;
+                    color: #e0e0e1;
+                    margin: 5px 0;
+                  }
+                }
+                &:first-child {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  column-gap: 0.5rem;
+                }
+                &:last-child {
+                  //   text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+      .rightWrapper {
+        width: 45%;
+        position: relative;
+        cursor: pointer;
+        @media screen and (max-width: 865px) {
+          order: 1;
+          height: 300px;
+          width: 100%;
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1350px) {
+          order: 1;
+          height: 300px;
+          width: 100%;
+        }
+        &:hover {
+          .videoLoading {
+            background-image: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.377) 0%,
+              #000000 100%
+            );
+            .btnWrapper {
+              .btn {
+                background-color: $primaryHover;
+              }
+            }
+            .iconWrapper {
+              .icon {
+                rotate: 360deg;
+                transform: 1s;
+                width: 65px;
+                height: 65px;
+                filter: drop-shadow(2px 2px 2px 1px $primaryHover);
+              }
+            }
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 232px;
+          object-fit: cover;
+          @media screen and (max-width: 1350px) {
+            max-height: 100%;
+          }
+        }
+        .videoLoading {
+          position: absolute;
+          top: 0;
+          padding: 0.5rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          background-image: $backgroundGradient;
+          .btnWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 10%;
+            .btn {
+              padding: 0.2rem;
+              background-color: $primary;
+              font-family: $headingFamily;
+              color: $whiteColor;
+              font-size: 12px;
+            }
+          }
+          .iconWrapper {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+              color: $whiteColor;
+              font-size: 10px !important;
+              background-color: $primary;
+              border: none;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+    .loadingHeading {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      column-gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      .ico {
+      }
+      font-size: 18px;
+      color: $primary;
+      font-family: $headingFamily;
+    }
+  }
+}

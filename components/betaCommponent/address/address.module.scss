@@ -1,0 +1,74 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  .borderWrapper {
+    background: $primary;
+    border-radius: 8px 8px 0px 0px;
+    height: 12px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .wrapper {
+    background: #232325;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 23px 25px 17px;
+    row-gap: 12px;
+    .headingWrapper {
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 22px;
+        }
+      }
+      p {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.6667px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .subHeading {
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14.6667px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 13px;
+        }
+      }
+      p {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.6667px;
+        line-height: 20px;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

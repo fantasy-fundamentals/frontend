@@ -1,0 +1,58 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/backgrounds/homeBg.webp");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    box-sizing: border-box;
+    .textWrapper {
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        text-align: left;
+      }
+      width: 85%;
+      text-align: center;
+
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 60px;
+        color: $whiteColor;
+
+        @media screen and (min-width: 1024px) and (max-width: 1250px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 1024px) {
+          font-size: 25px;
+          text-align: left;
+        }
+      }
+      p {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 37px;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

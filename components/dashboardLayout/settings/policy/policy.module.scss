@@ -1,0 +1,25 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  // overflow: auto;
+  // max-height: 70vh;
+  .wrapper {
+    width: 100%;
+
+    label {
+      font-family: $headingFamily;
+      // font-style: normal;
+      // font-weight: 600;
+      // font-size: 30px;
+      // line-height: 79px;
+      // text-transform: uppercase;
+      @media screen and (max-width: 1024px) {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-family: $headingFamily;
+      line-height: 22px !important;
+    }
+  }
+}

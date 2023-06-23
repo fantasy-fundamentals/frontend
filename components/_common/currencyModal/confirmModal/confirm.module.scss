@@ -1,0 +1,58 @@
+@import "../../../../constants/scss/colors.scss";
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+  .flexWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .name {
+      font-size: 16px;
+      font-weight: 500;
+      color: $whiteColor;
+    }
+    .value {
+      font-size: 15px;
+      font-weight: 500;
+      color: $whiteColor;
+    }
+  }
+  .btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    button {
+      background-color: $primary;
+      width: 100%;
+      padding: 0.8rem 2rem;
+      box-sizing: border-box;
+      text-align: center;
+      color: $whiteColor;
+      transition: 0.4s;
+      max-width: 100%;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: "Montserrat";
+      border: none;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        box-shadow: inset -255px 0 0 0 $primaryHover,
+          inset 255px 0 0 0 $primaryHover;
+      }
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 0.6rem 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    overflow-y: auto;
+    table {
+      width: 100%;
+      min-width: 350px;
+      font-family: $headingFamily;
+
+      thead {
+        tr {
+          th {
+            text-align: left;
+            height: 40px;
+            background-color: $bgPrimary;
+            padding: 0 0.5rem;
+            font-size: 14px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            text-align: left;
+            height: 55px;
+            background-color: $bgColor;
+            padding: 0 0.5rem;
+            border-bottom: 1px solid $bgPrimary;
+            font-size: 14px;
+            img {
+              height: 25px;
+              width: 25px;
+            }
+            &:first-child {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+        &:last-child {
+          tr {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

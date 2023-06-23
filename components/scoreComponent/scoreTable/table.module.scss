@@ -1,0 +1,96 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    overflow-y: auto;
+    table {
+      width: 100%;
+      min-width: 900px;
+      font-family: $headingFamily;
+
+      thead {
+        tr {
+          th {
+            text-align: left;
+            height: 50px;
+            background-color: $bgColor;
+            color: $whiteColor;
+            padding: 0 0.5rem;
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+      }
+      tbody {
+        tr {
+          background-color: $bgPrimary;
+          transition: 0.5s;
+          td {
+            text-align: left;
+            height: 65px;
+            // background-color: $bgPrimary;
+            padding: 0 0.5rem;
+            border-bottom: 1px solid $bgColor;
+            font-size: 18px;
+            color: $whiteColor;
+            user-select: none;
+            span {
+              display: flex;
+              // justify-content: center;
+              margin-left: 1rem;
+              align-items: center;
+              font-weight: 500;
+            }
+            &:first-child {
+              // color: $primary;
+
+              .favActive {
+                color: $primary;
+              }
+            }
+            &:nth-child(2) {
+              display: flex;
+              align-items: center;
+            }
+            &:last-child {
+              button {
+                background-color: transparent;
+                width: 100%;
+                padding: 0.5rem;
+                box-sizing: border-box;
+                text-align: center;
+                color: white;
+                transition: 0.25s;
+                font-family: $headingFamily;
+                border: 1px solid #dc1a22;
+                width: 110px;
+                font-size: 15px;
+                cursor: pointer;
+                outline: none;
+                &:hover {
+                  box-shadow: inset -55px 0 0 0 #dc1a22,
+                    inset 55px 0 0 0 #dc1a22;
+                }
+                &:focus {
+                  box-shadow: inset 110px 0 0 0 #dc1a22;
+                }
+              }
+            }
+          }
+          &:hover {
+            // background: rgb(39, 39, 39);
+            background: #d80f2a1f;
+          }
+        }
+        &:last-child {
+          tr {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1800px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.8rem;
+    .headerWrapper {
+      width: 100%;
+      background-image: url("/backgrounds/playerInfoBg.webp");
+      // img {
+      //   width: 100%;
+      //   height: 398px;
+      //   @media screen and (max-width: 1024px) {
+      //     height: 100%;
+      //   }
+      // }
+      .headingWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1.5rem;
+        padding: 4rem 2rem;
+        box-sizing: border-box;
+        @media screen and (max-width: 1024px) {
+          justify-content: center;
+          row-gap: 0.5rem;
+          padding: 3rem 2rem;
+        }
+        label {
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 29px;
+          color: $whiteColor;
+          @media screen and (max-width: 1024px) {
+            text-align: center;
+            font-size: 25px;
+          }
+        }
+        p {
+          margin: 0;
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 29px;
+          color: $whiteColor;
+          @media screen and (max-width: 1024px) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .detailWrapper {
+      width: 100%;
+      overflow-x: auto;
+      table {
+        width: 100%;
+        min-width: 950px;
+        font-family: $headingFamily;
+        tbody {
+          tr {
+            td {
+              text-align: left;
+              height: 70px;
+              background-color: $bgColor;
+              padding: 0 0.5rem;
+              border-bottom: 1px solid $bgPrimary;
+              color: $whiteColor;
+              font-size: 16px;
+              @media screen and (max-width: 1024px) {
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bioWrapper {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 1rem;
+      background-color: $bgColor;
+      padding: 0.5rem;
+      width: 100%;
+      box-sizing: border-box;
+      @media screen and (max-width: 1024px) {
+        align-items: center;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: $whiteColor;
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+        }
+      }
+      p {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $whiteColor;
+        margin: 0;
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

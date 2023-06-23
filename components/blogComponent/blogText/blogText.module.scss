@@ -1,0 +1,33 @@
+@import "../../../constants/scss/colors.scss";
+
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    .card {
+      width: 100%;
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+      }
+      &:last-child {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+      span {
+        color: $whiteColor;
+      }
+      p {
+        color: $whiteColor;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

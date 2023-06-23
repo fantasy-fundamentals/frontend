@@ -1,0 +1,162 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .videoWrapper {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    height: 659px;
+    margin-top: 1.3rem;
+    span {
+      color: $primary;
+      user-select: none;
+    }
+    @media screen and (max-width: 865px) {
+      // order: 1;
+      height: 300px;
+      width: 100%;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1350px) {
+      // order: 1;
+      height: 300px;
+      width: 100%;
+    }
+    &:hover {
+      .videoLoading {
+        background-color: rgba(0, 0, 0, 0.74);
+        .btnWrapper {
+          .btn {
+            background-color: $primaryHover;
+          }
+        }
+        .iconWrapper {
+          .icon {
+            rotate: 360deg;
+            transform: 1s;
+            width: 75px;
+            height: 75px;
+            filter: drop-shadow(2px 2px 2px 1px $primaryHover);
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: black;
+    }
+    .videoLoading {
+      position: absolute;
+      top: 0;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.664);
+      .btnWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        //   height: 4%;
+        .btn {
+          padding: 0.5rem;
+          background-color: $primary;
+          font-family: $headingFamily;
+          color: $whiteColor;
+          font-size: 12px;
+        }
+      }
+      .iconWrapper {
+        height: 95%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          color: $whiteColor;
+          font-size: 10px !important;
+          background-color: $primary;
+          border: none;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1800px;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    row-gap: 1.5rem;
+    .headingWrapper {
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 29px;
+        color: $whiteColor;
+        @media screen and (max-width: 1024px) {
+          font-size: 25px;
+        }
+      }
+    }
+    table {
+      width: 100%;
+      background-color: $bgColor;
+      padding: 1rem;
+      box-sizing: border-box;
+      thead {
+        tr {
+          th {
+            width: 50%;
+            text-align: center;
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 29px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 1rem 0;
+            text-align: center;
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 29px;
+            color: $whiteColor;
+            @media screen and (max-width: 1024px) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

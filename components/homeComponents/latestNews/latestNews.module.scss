@@ -1,0 +1,230 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  margin: 3rem 0 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    .heading {
+      margin-bottom: 1.5rem;
+      label {
+        font-family: $peragraphFamily;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        color: $whiteColor;
+        @media screen and (max-width: 600px) {
+          font-size: 25px;
+        }
+        span {
+          // -webkit-text-stroke: 1px $primary;
+          // color: transparent;
+          color: $primary;
+        }
+      }
+    }
+    .cardWrapper {
+      display: flex;
+      width: 100%;
+      column-gap: 0.3rem;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+      .leftWrapper {
+        width: 60%;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+        .cardWrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0.5rem;
+            background: #232325;
+            row-gap: 1rem;
+            width: 30.5% !important;
+            cursor: pointer;
+            height: 456px;
+            overflow-x: auto;
+            // @media screen and (max-width: 1024px) {
+            //   width: 96.4% !important;
+            // }
+            @media screen and (min-width: 1700px) and (max-width: 1870px) {
+              width: 30.2% !important;
+            }
+            @media screen and (min-width: 1600px) and (max-width: 1700px) {
+              width: 30% !important;
+            }
+            @media screen and (min-width: 1500px) and (max-width: 1600px) {
+              width: 29.8% !important;
+            }
+            @media screen and (min-width: 1430px) and (max-width: 1500px) {
+              width: 29.6% !important;
+            }
+            @media screen and (min-width: 1348px) and (max-width: 1430px) {
+              width: 29.3% !important;
+            }
+            @media screen and (min-width: 1248px) and (max-width: 1348px) {
+              width: 29% !important;
+            }
+            @media screen and (min-width: 1223px) and (max-width: 1248px) {
+              width: 28.7% !important;
+            }
+            @media screen and (min-width: 1123px) and (max-width: 1223px) {
+              width: 45.5% !important;
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1123px) {
+              width: 45.2% !important;
+            }
+            @media screen and (min-width: 900px) and (max-width: 1024px) {
+              width: 30.1% !important;
+            }
+            @media screen and (min-width: 800px) and (max-width: 900px) {
+              width: 29.7% !important;
+            }
+            @media screen and (min-width: 600px) and (max-width: 800px) {
+              width: 54.5% !important;
+            }
+            @media screen and (min-width: 400px) and (max-width: 600px) {
+              width: 95.8% !important;
+              // width: 96.8% !important;
+            }
+            @media screen and (max-width: 400px) {
+              width: 93.9% !important;
+              // width: 95% !important;
+            }
+            &:hover {
+              .topWrapper {
+                img {
+                  transform: scale(1.05);
+                }
+                .heading {
+                  color: $whiteColor;
+                }
+              }
+              .textWrapper {
+                .leftWrapper {
+                  background: $whiteColor;
+                  color: $primary;
+                  transition: 0.8s;
+                }
+              }
+            }
+            .topWrapper {
+              display: flex;
+              flex-direction: column;
+              row-gap: 1rem;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 284px;
+                object-fit: cover;
+                transition: 0.5s all ease-out;
+                overflow: hidden;
+              }
+              .heading {
+                font-family: $headingFamily;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 29px;
+                color: #e0e0e1;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+
+            .textWrapper {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              .leftWrapper {
+                width: 20%;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $primary;
+                font-family: $headingFamily;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                /* identical to box height */
+                transition: 0.5s;
+                color: $whiteColor;
+              }
+              .rightWrapper {
+                font-family: $headingFamily;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 29px;
+                /* identical to box height, or 242% */
+                text-align: right;
+                color: $whiteColor;
+              }
+            }
+          }
+        }
+      }
+      .cardRightWrapper {
+        width: 40%;
+        height: 472px;
+        overflow-x: auto;
+        background: #232325;
+
+        box-sizing: border-box;
+        @media screen and (max-width: 1024px) {
+          width: 100% !important;
+        }
+        .heading {
+          padding: 1rem 1rem;
+          label {
+            font-family: $peragraphFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            color: $whiteColor;
+          }
+        }
+
+        .card {
+          .subHeading {
+            padding: 1.5rem 1rem;
+            // padding: 1.1rem 0;
+            border-bottom: 0.5px solid #000000;
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 29px;
+            color: #e0e0e1;
+            cursor: pointer;
+            &:last-child {
+              border: none;
+            }
+            &:hover {
+              background-color: $primaryHover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@import "../../../constants/scss/colors.scss";
+.disableDropdown {
+  cursor: not-allowed;
+  display: flex;
+  background: transparent;
+  border: 1px solid $bgColor;
+  background-color: $bgColor;
+  padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: $headingFamily;
+  user-select: none;
+  .dropdownbtn {
+    display: flex;
+    background: transparent;
+    border: 1px solid $bgColor;
+    background-color: $bgColor;
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+
+    box-sizing: border-box;
+    font-family: $headingFamily;
+
+    span {
+      width: 100%;
+      padding: 0 10px;
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+      color: $whiteColor;
+      font-weight: 500;
+      display: flex;
+      flex: 1;
+      appearance: none;
+      padding: 0 6px;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+
+    .imgContainer {
+      min-height: 26px;
+      min-width: 26px;
+      max-height: 26px;
+      max-width: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-top: 3.5px;
+
+      .leftIcon {
+        font-size: 25px;
+        color: $whiteColor;
+        rotate: 180deg;
+        text-align: center;
+      }
+    }
+
+    .withRightIcon {
+      max-width: 20px;
+      height: auto;
+      font-size: 22px;
+      color: $whiteColor;
+      padding-top: 6px;
+      margin: 0;
+    }
+  }
+}
+.dropdown {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  .dropdownbtn {
+    display: flex;
+    background: transparent;
+    border: 1px solid $bgColor;
+    background-color: $bgColor;
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    font-family: $headingFamily;
+
+    span {
+      width: 100%;
+      padding: 0 10px;
+      border: none;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+      color: $whiteColor;
+      font-weight: 500;
+      display: flex;
+      flex: 1;
+      appearance: none;
+      padding: 0 6px;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+
+    .imgContainer {
+      min-height: 26px;
+      min-width: 26px;
+      max-height: 26px;
+      max-width: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-top: 3.5px;
+
+      .leftIcon {
+        font-size: 25px;
+        color: $whiteColor;
+        rotate: 180deg;
+        text-align: center;
+      }
+    }
+
+    .withRightIcon {
+      max-width: 20px;
+      height: auto;
+      font-size: 22px;
+      color: $whiteColor;
+      padding-top: 6px;
+      margin: 0;
+    }
+  }
+
+  .dropdowncontent {
+    box-sizing: border-box;
+    position: absolute;
+    top: 110%;
+    background: #000000;
+    font-family: $headingFamily;
+    border: 1px solid $bgPrimary;
+    backdrop-filter: inherit;
+    padding: 10px 5px;
+    width: 100%;
+    color: $whiteColor;
+    max-height: 200px;
+    overflow-y: auto;
+    text-transform: capitalize;
+    scrollbar-width: thin;
+    z-index: 5;
+    // box-shadow: 1px 5px 30px 0.1px rgba(255, 255, 255, 0.164);
+  }
+
+  .dropdownitems {
+    padding: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  .dropdownitems:hover {
+    background-color: $primary;
+    color: $whiteColor;
+  }
+}

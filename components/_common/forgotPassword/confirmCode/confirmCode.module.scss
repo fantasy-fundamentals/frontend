@@ -1,0 +1,130 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 2rem;
+    @media screen and (max-width: 1024px) {
+      padding: 1rem;
+    }
+    .headingWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        color: $whiteColor;
+        margin-bottom: 1rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 22px;
+        }
+      }
+    }
+    .inputWrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      .forgot {
+        width: 100%;
+        text-align: right;
+        label {
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: right;
+          color: $primary;
+          cursor: pointer;
+          @media screen and (max-width: 1024px) {
+            font-size: 13px;
+          }
+        }
+      }
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 22px;
+        color: #e0e0e1;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+      }
+      .errorStyle {
+        color: $primary;
+        font-family: $headingFamily;
+        font-size: 13px;
+      }
+      .inputStyle {
+        height: 50px;
+        // padding: 0.1rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        align-items: center;
+        column-gap: 0.5rem;
+        @media screen and (max-width: 1024px) {
+          height: 40px;
+        }
+
+        input {
+          height: 100%;
+          width: 100%;
+          background: #111112;
+          border: none;
+          outline: none;
+          color: white;
+          text-align: center;
+          &::placeholder {
+            color: #e0e0e1af;
+          }
+        }
+      }
+    }
+
+    .btnWrapper {
+      width: 100%;
+      button {
+        background-color: $primary;
+        width: 100%;
+        padding: 0.8rem 2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: $whiteColor;
+        transition: 0.4s;
+        max-width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: "Montserrat";
+        border: none;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          box-shadow: inset -255px 0 0 0 $primaryHover,
+            inset 255px 0 0 0 $primaryHover;
+        }
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 600px) {
+          padding: 0.6rem 1rem;
+        }
+      }
+    }
+  }
+}

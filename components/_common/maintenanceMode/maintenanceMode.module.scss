@@ -1,0 +1,39 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 2rem;
+  box-sizing: border-box;
+  .wrapper {
+    max-width: 1950px;
+    min-height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin: 0 1rem;
+
+    .headingWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      .heading {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $primary;
+        @media screen and (max-width: 600px) {
+          font-size: 1.5rem;
+        }
+      }
+      .subHeading {
+        font-size: 1.5rem;
+        color: $whiteColor;
+        line-height: 40px;
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

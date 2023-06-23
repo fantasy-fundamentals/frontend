@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    /**temp**/
+    // margin-top: 7rem;
+    margin-top: 2rem;
+    @media screen and (max-width: 1024px) {
+      padding: 2rem 0rem;
+    }
+  }
+}

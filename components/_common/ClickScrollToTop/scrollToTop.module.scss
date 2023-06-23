@@ -1,0 +1,55 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  animation: mymove 0.5s;
+  z-index: 5;
+  @media screen and (max-width: 600px) {
+    bottom: 20px;
+    right: 20px;
+  }
+  button {
+    height: 40px;
+    width: 40px;
+    user-select: none;
+    border-radius: 100%;
+    background-color: $primary;
+    box-shadow: 0px 0px 18px $bgSec;
+    border: none;
+    cursor: pointer;
+    transition: 0.8s;
+
+    @media screen and (max-width: 600px) {
+      height: 30px;
+      width: 30px;
+      cursor: unset;
+    }
+
+    &:hover {
+      background-color: $primaryHover;
+      transition: 0.5s;
+      .icon {
+        color: black;
+        transition: 0.5s;
+      }
+    }
+    .icon {
+      color: $whiteColor;
+      font-size: 16px;
+      transition: 0.8s;
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@keyframes mymove {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 40px;
+  }
+}

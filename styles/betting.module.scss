@@ -1,0 +1,60 @@
+@import "/constants/scss/colors.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.5rem;
+  /**temp***/
+  // margin-top: 12.5rem;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1.5rem 5rem;
+    @media screen and (max-width: 1024px) {
+      padding: 1.5rem 2rem;
+    }
+    .heading {
+      color: $whiteColor;
+      font-family: $peragraphFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      span {
+        color: $primary;
+      }
+      @media screen and (max-width: 1024px) {
+        font-size: 30px;
+      }
+    }
+    .statusBar {
+      color: $whiteColor;
+      padding: 0.5rem 0 0.5rem 0;
+      width: 100%;
+      background-color: black;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+
+      span {
+        &:nth-child(1) {
+          color: #baba02;
+        }
+        &:nth-child(2) {
+          color: #3fff3f;
+        }
+        &:nth-child(3) {
+          color: green;
+        }
+      }
+    }
+  }
+}

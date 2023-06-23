@@ -1,0 +1,90 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  padding: 0 5rem 0 5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    padding: 0 2rem 0 2rem;
+    margin-top: 6rem;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1800px;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    .cardWrapper {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 2rem;
+      overflow: auto;
+      width: 100%;
+
+      .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        img {
+          height: 300px;
+          width: 100%;
+          object-fit: cover;
+        }
+        label {
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 28px;
+          color: $whiteColor;
+          @media screen and (min-width: 1024px) and (max-width: 1250px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 18px;
+            text-align: left;
+          }
+        }
+        p {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          column-gap: 0.5rem;
+          margin: 0;
+          padding: 0;
+
+          .borderWrapper {
+            border: 0.1px solid $whiteColor;
+            height: 0.1px;
+            background-color: $whiteColor;
+            width: 20%;
+            @media screen and (max-width: 1024px) {
+              border: none;
+            }
+          }
+          span {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: $primary;
+            letter-spacing: 0.04em;
+            @media screen and (max-width: 1024px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    .cardWrapper {
+      width: 100%;
+      display: flex;
+      column-gap: 1rem;
+      row-gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      .card {
+        background-color: $bgColor;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 32%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        @media screen and (min-width: 900px) and (max-width: 1024px) {
+          max-width: 45%;
+        }
+        @media screen and (max-width: 900px) {
+          max-width: 100%;
+        }
+        .heading {
+          text-align: center;
+          label {
+            font-family: $headingFamily;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 29px;
+            color: $whiteColor;
+            @media screen and (max-width: 600px) {
+              font-size: 18px;
+            }
+          }
+        }
+        .peraWrapper {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1rem;
+          box-sizing: border-box;
+          @media screen and (max-width: 600px) {
+            padding: 0 0.2rem;
+          }
+          @media screen and (min-width: 1024px) and (max-width: 1400px) {
+            padding: 0 0.2rem;
+          }
+          .leftWrapper {
+            text-align: center;
+            label {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 29px;
+              color: #e0e0e1;
+              @media screen and (max-width: 600px) {
+                font-size: 13px;
+              }
+              @media screen and (min-width: 1024px) and (max-width: 1400px) {
+                font-size: 14px;
+              }
+            }
+            p {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 30px;
+              line-height: 29px;
+              color: $whiteColor;
+              @media screen and (max-width: 600px) {
+                font-size: 20px;
+              }
+              @media screen and (min-width: 1024px) and (max-width: 1400px) {
+                font-size: 25px;
+              }
+            }
+          }
+          .rightWrapper {
+            text-align: center;
+            label {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 29px;
+              color: #e0e0e1;
+              @media screen and (max-width: 600px) {
+                font-size: 13px;
+              }
+              @media screen and (min-width: 1024px) and (max-width: 1400px) {
+                font-size: 14px;
+              }
+            }
+            .cartWrappet {
+              padding: 0.5rem 0;
+            }
+            p {
+              font-family: $headingFamily;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 30px;
+              line-height: 29px;
+              color: $whiteColor;
+              @media screen and (max-width: 600px) {
+                font-size: 20px;
+              }
+              @media screen and (min-width: 1024px) and (max-width: 1400px) {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

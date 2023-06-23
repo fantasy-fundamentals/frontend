@@ -1,0 +1,74 @@
+@import "../../../../constants/scss/colors.scss";
+.container {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    .headingWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.4rem;
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 40px;
+        color: #e0e0e1;
+      }
+      p {
+        margin: 0;
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 29px;
+        color: #e0e0e1;
+      }
+    }
+    .DropDownWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      max-width: 40%;
+      @media screen and (max-width: 700px) {
+        max-width: 100%;
+      }
+      @media screen and (min-width: 700px) and (max-width: 1400px) {
+        max-width: 60%;
+      }
+      .dropDownHeading {
+        width: 100%;
+        label {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $whiteColor;
+          font-family: $headingFamily;
+        }
+      }
+    }
+    .bottomWrapper {
+      width: 100%;
+      label {
+        font-family: $headingFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 29px;
+        color: $whiteColor;
+        span {
+          font-family: $headingFamily;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 29px;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
